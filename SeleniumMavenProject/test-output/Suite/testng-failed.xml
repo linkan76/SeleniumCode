@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <parameter name="browser" value="firefox"/>
+  <test name="Test1">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.tests.NewTest11"/>
+    </classes>
+  </test> <!-- Test1 -->
+  <test name="Test2">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.tests.NewTest11"/>
+    </classes>
+  </test> <!-- Test2 -->
+  <test name="Test1(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.tests.NewTest11">
+        <methods>
+          <include name="testDemoWbShopLogin" invocation-numbers="1 2"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.tests.NewTest11 -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test name="Test2(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.tests.NewTest11">
+        <methods>
+          <include name="testDemoWbShopLogin"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.tests.NewTest11 -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
